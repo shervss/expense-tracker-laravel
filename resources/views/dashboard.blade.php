@@ -29,25 +29,6 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-                <div class="bg-gradient-to-r from-green-500 to-green-700 text-white p-6 rounded-2xl shadow-xl">
-                    <h3 class="text-lg font-bold mb-2">💰 Total Income</h3>
-                    <p class="text-3xl font-bold">₱0.00</p>
-                </div>
-
-                <div class="bg-gradient-to-r from-red-500 to-red-700 text-white p-6 rounded-2xl shadow-xl">
-                    <h3 class="text-lg font-bold mb-2">💸 Total Expenses</h3>
-                    <p class="text-3xl font-bold">₱0.00</p>
-                </div>
-
-                <div class="bg-gradient-to-r from-blue-500 to-blue-700 text-white p-6 rounded-2xl shadow-xl">
-                    <h3 class="text-lg font-bold mb-2">🏦 Balance</h3>
-                    <p class="text-3xl font-bold">₱0.00</p>
-                </div>
-
-            </div>
-
         </div>
     </div>
 </x-app-layout>
