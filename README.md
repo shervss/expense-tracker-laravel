@@ -28,8 +28,7 @@ A simple Personal Expense Tracker built with Laravel that helps users manage the
 
 ### Transactions List
 
-![image alt](<img width="1919" height="752" alt="image" src="https://github.com/user-attachments/assets/6df4c8b2-b94e-4af5-ac52-b113f66ffb47" />
-)
+![image alt](<img width="1919" height="752" alt="image" src="https://github.com/user-attachments/assets/6df4c8b2-b94e-4af5-ac52-b113f66ffb47" />)
 
 ### Monthly Reports
 
