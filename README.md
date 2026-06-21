@@ -1,59 +1,241 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 💰 Personal Expense Tracker (Laravel)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A simple Personal Expense Tracker built with Laravel that helps users manage their finances by recording income and expenses, categorizing transactions, and generating monthly financial reports.
 
-## About Laravel
+## ✨ Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+* 🔐 User Authentication (Register/Login)
+* ➕ Add Income and Expense Transactions
+* 🏷️ Categorize Transactions
+* 📋 View Transaction History
+* 📊 Monthly Financial Reports
+* 💰 Dashboard Summary
+* 🔎 Transaction Search
+* 📄 Pagination Support
+* 🌙 Dark Mode Friendly Interface
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📸 Preview
 
-## Learning Laravel
+### Dashboard
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+![image alt](https://github.com/shervss/expense-tracker-laravel/blob/main/preview/preview1_main_dashboard.png?raw=true)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Add Transaction
 
-## Laravel Sponsors
+![image alt](https://github.com/shervss/expense-tracker-laravel/blob/main/preview/preview2_transactions_create.png?raw=true)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Transactions List
 
-### Premium Partners
+![image alt](<img width="1919" height="752" alt="image" src="https://github.com/user-attachments/assets/6df4c8b2-b94e-4af5-ac52-b113f66ffb47" />
+)
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Monthly Reports
 
-## Contributing
+![image alt](https://github.com/shervss/expense-tracker-laravel/blob/main/preview/preview4_reports_monthly.png?raw=true)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 🛠️ Requirements
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Before running the project, make sure you have:
 
-## Security Vulnerabilities
+* PHP 8.2 or later
+* Composer
+* Node.js and npm
+* MySQL
+* Git
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 🚀 Installation Guide
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/shervss/expense-tracker-laravel.git
+```
+
+### 2. Navigate to the Project Folder
+
+```bash
+cd expense-tracker-laravel
+```
+
+### 3. Install PHP Dependencies
+
+```bash
+composer install
+```
+
+### 4. Install Node Dependencies
+
+```bash
+npm install
+```
+
+### 5. Create Environment File
+
+```bash
+copy .env.example .env
+```
+
+or on Linux/macOS:
+
+```bash
+cp .env.example .env
+```
+
+### 6. Generate Application Key
+
+```bash
+php artisan key:generate
+```
+
+### 7. Create MySQL Database
+
+Open phpMyAdmin and create a database named:
+
+```text
+expense_tracker
+```
+
+### 8. Configure Database Connection
+
+Open `.env` and update:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=expense_tracker
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Update the values if your MySQL configuration is different.
+
+### 9. Run Database Migrations
+
+```bash
+php artisan migrate
+```
+
+### 10. Seed Default Categories
+
+```bash
+php artisan db:seed
+```
+
+This will create the following categories:
+
+* Food
+* Transportation
+* Bills
+* Entertainment
+* Salary
+* Others
+
+### 11. Build Frontend Assets
+
+```bash
+npm run dev
+```
+
+### 12. Start the Laravel Server
+
+```bash
+php artisan serve
+```
+
+Open:
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+## 👤 Using the Application
+
+### Register an Account
+
+1. Open the application.
+2. Click **Register**.
+3. Create your account.
+4. Login.
+
+### Add a Transaction
+
+1. Open Dashboard.
+2. Click **Add Transaction**.
+3. Select:
+
+   * Transaction Type (Income or Expense)
+   * Category
+   * Amount
+   * Description
+   * Date
+4. Click **Save Transaction**.
+
+### View Transactions
+
+1. Click **View Transactions**.
+2. Browse all recorded transactions.
+3. Use the search feature to find specific entries.
+
+### View Monthly Report
+
+1. Click **Monthly Reports**.
+2. View:
+
+   * Total Income
+   * Total Expenses
+   * Current Balance
+
+---
+
+## 📂 Project Structure
+
+```text
+app/
+├── Http/Controllers
+│   ├── TransactionController.php
+│   └── ReportController.php
+
+app/Models
+├── Transaction.php
+└── Category.php
+
+resources/views
+├── dashboard.blade.php
+├── transactions/
+└── reports/
+
+database
+├── migrations/
+└── seeders/
+```
+
+---
+
+## 🧰 Built With
+
+* Laravel 12
+* PHP 8.2
+* MySQL
+* Blade Templates
+* Tailwind CSS
+
+---
+
+## 👨‍💻 Author
+
+Shervin Marco Mangulabnan
+
+---
+
+## 📄 License
+
+This project is for educational and portfolio purposes.
