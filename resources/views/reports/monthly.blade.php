@@ -1,5 +1,7 @@
-<h1>Monthly Financial Report</h1>
+<h1>Monthly Report Works</h1>
 
-<p>Total Income: ₱0.00</p>
-<p>Total Expenses: ₱0.00</p>
-<p>Balance: ₱0.00</p>
+<p>Total Income: {{ $totalIncome }}</p>
+
+<p>Total Expense: {{ $totalExpense }}</p>
+
+<p>Balance: {{ $balance }}</p>
